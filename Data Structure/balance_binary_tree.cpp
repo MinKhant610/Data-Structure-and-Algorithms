@@ -41,7 +41,14 @@ int main () {
     root = newNode(8);
     root->left = newNode (10);
     root->right = newNode (3);
-    root->right->left = newNode (11);
+
+    root->left->left = newNode (5);
+    root->left->right = newNode (2);
+
+    root->right->left = newNode (1);
+    root->right->right = newNode (6);
+
+    root->right->left->left = newNode (7);
     //root->right->left->right = newNode (31);
 
     if (isBalancebinary(root, &heigh))
