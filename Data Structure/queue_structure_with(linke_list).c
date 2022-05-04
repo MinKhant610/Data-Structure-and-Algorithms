@@ -63,11 +63,12 @@ int main (){
     queue_data temp;
     Queue queue = initQueue();
 
+    printf("Enter a positive num:> ");
+    scanf("%d ", &num);
     while (num > 0){
-        printf("Enter a positive num:> ");
-        scanf("%d ", &num);
         temp.data = num ;
         enqueue (queue, temp);
+        scanf("%d ", &num);
     }
 
     printf("data : ");

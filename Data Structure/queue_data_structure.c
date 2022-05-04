@@ -45,15 +45,15 @@ int main(){
     Queue initQueq();
     Queue queue = initQueq();
     int num = 0;
-    
-    printf("Enter a positive num:> ");
+
+    printf("Enter a positive num or -1 to exit:> ");
     scanf("%d ", &num);
-    
-    while (num > 0){
-        enqueue(queue, num%10);
-        num = num / 10;
+    while (num > -1){
+        enqueue(queue, num);
+        scanf("%d ", &num);
     }
-    printf("Reverse data : ");
+    
+    printf("Queue data (FIFO) : ");
     while (!(empty(queue))){
         printf("%d ",dequeue(queue));
     }
